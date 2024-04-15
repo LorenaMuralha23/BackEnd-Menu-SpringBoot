@@ -1,9 +1,11 @@
 package com.example.cardapio.food;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
 @Table(name = "tb_food")
+@Getter
 public class Food {
 
     @Id

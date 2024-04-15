@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController //essa classe é um controller da nossa aplicação
-@RequestMapping("food")
+@RequestMapping("/foods")
 public class FoodController {
 
     @Autowired
     private FoodRepository repository;
 
-    @GetMapping
+    @GetMapping(value = "/allFood")
     public List<Food> getAll(){
         List<Food> foodList = repository.findAll();
         return foodList;
